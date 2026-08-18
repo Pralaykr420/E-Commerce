@@ -15,7 +15,7 @@ import DeliveryPage from './pages/DeliveryPage';
 import OffersPage from './pages/OffersPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL;
 const isAdminUser = (user) => !!user && (user.role === 'admin' || user.email === 'pralaykr20@gmail.com' || user.email === 'admin@luxecart.com');
 
 const readLocalStorage = (key, fallback) => {
