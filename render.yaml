@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: luxecart-server
+    env: node
+    rootDir: ./server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: CLIENT_URL
+        value: https://your-frontend-url.example.com
+      - key: MONGO_URI
+        value: mongodb+srv://username:password@cluster.mongodb.net/luxecart
+      - key: JWT_SECRET
+        generateValue: true
